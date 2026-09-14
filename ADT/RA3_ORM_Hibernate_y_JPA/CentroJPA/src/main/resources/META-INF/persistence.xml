@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_2.xsd"
+             version="3.2">
+    <persistence-unit name="CentroPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <class>com.ejemplo.centro.modelo.Persona</class>
+        <class>com.ejemplo.centro.modelo.Alumno</class>
+        <class>com.ejemplo.centro.modelo.Profesor</class>
+        <class>com.ejemplo.centro.modelo.Administrativo</class>
+        <class>com.ejemplo.centro.modelo.Curso</class>
+        <class>com.ejemplo.centro.modelo.Departamento</class>
+        <class>com.ejemplo.centro.modelo.Asignatura</class>
+        <class>com.ejemplo.centro.modelo.Expediente</class>
+
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521/XEPDB1"/>
+            <property name="jakarta.persistence.jdbc.user" value="alumno"/>
+            <property name="jakarta.persistence.jdbc.password" value="Alumno123!"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.OracleDialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="validate"/>
+        </properties>
+    </persistence-unit>
+</persistence>
+ 

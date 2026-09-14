@@ -1,0 +1,67 @@
+services:
+
+  oracle:
+
+    image: gvenzl/oracle-xe:21-full
+
+    container_name: oracle_empresa
+
+    ports:
+
+      - "1521:1521"
+
+    environment:
+
+      ORACLE_PASSWORD: Oracle123
+
+      APP_USER: alumno
+
+      APP_USER_PASSWORD: Alumno123!
+
+    volumes:
+
+      - oracle_empresa_data:/opt/oracle/oradata
+
+    healthcheck:
+
+      test: ["CMD", "healthcheck.sh"]
+
+      interval: 10s
+
+      timeout: 5s
+
+      retries: 30
+
+      start_period: 20s
+
+  gestion-empresa:
+
+    build:
+
+      context: .
+
+      dockerfile: Dockerfile
+
+    container_name: gestion_empresa
+
+    ports:
+
+      - "8080:8080"
+
+    environment:
+
+      DB_PASSWORD: Alumno123!
+
+    depends_on:
+
+      oracle:
+
+        condition: service_healthy
+
+volumes:
+
+  oracle_empresa_data:
+
+    external: true
+
+    name: gestionempresa_oracle_empresa_data

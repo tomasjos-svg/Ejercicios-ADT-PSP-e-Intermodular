@@ -1,0 +1,8 @@
+entrada en proceso de lectura de fichero C:\Users\tomas\eclipse-workspace\ProcesadorFicheroObjetos\src\ProcesadorFicheroObjetos\AD.dat
+C:\Users\tomas\eclipse-workspace\ProcesadorFicheroObjetos\src\ProcesadorFicheroObjetos\AD.dat
+Hemos entrado en el proceso de lectura de C:\Users\tomas\eclipse-workspace\ProcesadorFicheroObjetos\src\ProcesadorFicheroObjetos\AD.dat
+Fin del fichero
+Nombre: Carlos Ruiz DNI: 44444444D Calificación: 7.0
+Nombre: Lucia Martin DNI: 55555555E Calificación: 8.0
+Nombre: Jorge Alvarez DNI: 66666666F Calificación: 5.5
+Alumnos leídos: 3

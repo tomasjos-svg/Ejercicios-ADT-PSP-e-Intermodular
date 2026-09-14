@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521/XEPDB1</property>
+        <property name="hibernate.connection.username">alumno</property>
+        <property name="hibernate.connection.password">Alumno123!</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">validate</property>
+
+        <mapping class="com.ejercicio14.concesionario.modelo.Cliente"/>
+        <mapping class="com.ejercicio14.concesionario.modelo.Coche"/>
+        <mapping class="com.ejercicio14.concesionario.modelo.Revision"/>        
+    </session-factory>
+</hibernate-configuration>

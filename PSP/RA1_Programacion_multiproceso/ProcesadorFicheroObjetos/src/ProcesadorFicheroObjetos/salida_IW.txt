@@ -1,0 +1,8 @@
+entrada en proceso de lectura de fichero C:\Users\tomas\eclipse-workspace\ProcesadorFicheroObjetos\src\ProcesadorFicheroObjetos\IW.dat
+C:\Users\tomas\eclipse-workspace\ProcesadorFicheroObjetos\src\ProcesadorFicheroObjetos\IW.dat
+Hemos entrado en el proceso de lectura de C:\Users\tomas\eclipse-workspace\ProcesadorFicheroObjetos\src\ProcesadorFicheroObjetos\IW.dat
+Fin del fichero
+Nombre: Diego Torres DNI: 12345678K Calificación: 5.9
+Nombre: Nuria Castro DNI: 23456789L Calificación: 8.7
+Nombre: Raul Moreno DNI: 34567890M Calificación: 6.4
+Alumnos leídos: 3

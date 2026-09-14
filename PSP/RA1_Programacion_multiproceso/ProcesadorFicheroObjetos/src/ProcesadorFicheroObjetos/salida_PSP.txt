@@ -1,0 +1,8 @@
+entrada en proceso de lectura de fichero C:\Users\tomas\eclipse-workspace\ProcesadorFicheroObjetos\src\ProcesadorFicheroObjetos\PSP.dat
+C:\Users\tomas\eclipse-workspace\ProcesadorFicheroObjetos\src\ProcesadorFicheroObjetos\PSP.dat
+Hemos entrado en el proceso de lectura de C:\Users\tomas\eclipse-workspace\ProcesadorFicheroObjetos\src\ProcesadorFicheroObjetos\PSP.dat
+Fin del fichero
+Nombre: Ana Garcia DNI: 11111111A Calificación: 8.5
+Nombre: Luis Perez DNI: 22222222B Calificación: 6.75
+Nombre: Maria Lopez DNI: 33333333C Calificación: 9.2
+Alumnos leídos: 3

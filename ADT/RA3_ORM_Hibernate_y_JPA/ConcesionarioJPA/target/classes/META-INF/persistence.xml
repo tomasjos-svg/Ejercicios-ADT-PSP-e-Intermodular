@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence
+    xmlns="https://jakarta.ee/xml/ns/persistence"
+    version="3.2">
+
+    <persistence-unit
+        name="ConcesionarioPU"
+        transaction-type="RESOURCE_LOCAL">
+
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <class>com.ejercicio14.concesionario.modelo.Cliente</class>
+        <class>com.ejercicio14.concesionario.modelo.Coche</class>
+        <class>com.ejercicio14.concesionario.modelo.Revision</class>
+
+        <properties>
+
+            <property
+                name="jakarta.persistence.jdbc.driver"
+                value="oracle.jdbc.OracleDriver"/>
+
+            <property
+                name="jakarta.persistence.jdbc.url"
+                value="jdbc:oracle:thin:@localhost:1521/XEPDB1"/>
+
+            <property
+                name="jakarta.persistence.jdbc.user"
+                value="alumno"/>
+
+            <property
+                name="jakarta.persistence.jdbc.password"
+                value="Alumno123!"/>
+
+            <property
+                name="hibernate.show_sql"
+                value="true"/>
+
+            <property
+                name="hibernate.format_sql"
+                value="true"/>
+
+            <property
+                name="hibernate.hbm2ddl.auto"
+                value="validate"/>
+
+        </properties>
+
+    </persistence-unit>
+
+</persistence>

@@ -1,0 +1,224 @@
+-------------------------------------------------------------------------------
+Test set: AlumnoDAOTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 1.787 s <<< FAILURE! -- in AlumnoDAOTest
+AlumnoDAOTest.testActualizar -- Time elapsed: 1.201 s <<< ERROR!
+java.sql.SQLSyntaxErrorException: 
+ORA-00942: la tabla o vista no existe
+
+https://docs.oracle.com/error-help/db/ora-00942/
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:718)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:618)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1372)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:975)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:237)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:524)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:298)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1510)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:2021)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1634)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3973)
+	at oracle.jdbc.driver.OraclePreparedStatement.doExecuteLargeUpdate(OraclePreparedStatement.java:4339)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeLargeUpdate(OraclePreparedStatement.java:4316)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:4291)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1007)
+	at AlumnoDAOTest.limpiarDatosTest(AlumnoDAOTest.java:28)
+	at AlumnoDAOTest.setUp(AlumnoDAOTest.java:16)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.sql.SQLSyntaxErrorException: ORA-00942: la tabla o vista no existe
+
+https://docs.oracle.com/error-help/db/ora-00942/
+		at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:718)
+		at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:618)
+		at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1372)
+		at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:975)
+		at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:237)
+		at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:524)
+		at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:298)
+		at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1510)
+		at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:2021)
+		at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1634)
+		at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3973)
+		at oracle.jdbc.driver.OraclePreparedStatement.doExecuteLargeUpdate(OraclePreparedStatement.java:4339)
+		at oracle.jdbc.driver.OraclePreparedStatement.executeLargeUpdate(OraclePreparedStatement.java:4316)
+		at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:4291)
+		at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1007)
+		at AlumnoDAOTest.limpiarDatosTest(AlumnoDAOTest.java:28)
+		at AlumnoDAOTest.tearDown(AlumnoDAOTest.java:21)
+		... 3 more
+	Caused by: Error : 942, Position : 12, SQL = DELETE FROM ALUMNOS WHERE CLAVE LIKE 'T%', Original SQL = DELETE FROM ALUMNOS WHERE CLAVE LIKE 'T%', Error Message = ORA-00942: la tabla o vista no existe
+
+		at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:726)
+		... 19 more
+Caused by: Error : 942, Position : 12, SQL = DELETE FROM ALUMNOS WHERE CLAVE LIKE 'T%', Original SQL = DELETE FROM ALUMNOS WHERE CLAVE LIKE 'T%', Error Message = ORA-00942: la tabla o vista no existe
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:726)
+	... 19 more
+
+AlumnoDAOTest.testEliminar -- Time elapsed: 0.157 s <<< ERROR!
+java.sql.SQLSyntaxErrorException: 
+ORA-00942: la tabla o vista no existe
+
+https://docs.oracle.com/error-help/db/ora-00942/
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:718)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:618)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1372)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:975)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:237)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:524)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:298)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1510)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:2021)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1634)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3973)
+	at oracle.jdbc.driver.OraclePreparedStatement.doExecuteLargeUpdate(OraclePreparedStatement.java:4339)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeLargeUpdate(OraclePreparedStatement.java:4316)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:4291)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1007)
+	at AlumnoDAOTest.limpiarDatosTest(AlumnoDAOTest.java:28)
+	at AlumnoDAOTest.setUp(AlumnoDAOTest.java:16)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.sql.SQLSyntaxErrorException: ORA-00942: la tabla o vista no existe
+
+https://docs.oracle.com/error-help/db/ora-00942/
+		at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:718)
+		at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:618)
+		at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1372)
+		at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:975)
+		at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:237)
+		at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:524)
+		at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:298)
+		at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1510)
+		at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:2021)
+		at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1634)
+		at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3973)
+		at oracle.jdbc.driver.OraclePreparedStatement.doExecuteLargeUpdate(OraclePreparedStatement.java:4339)
+		at oracle.jdbc.driver.OraclePreparedStatement.executeLargeUpdate(OraclePreparedStatement.java:4316)
+		at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:4291)
+		at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1007)
+		at AlumnoDAOTest.limpiarDatosTest(AlumnoDAOTest.java:28)
+		at AlumnoDAOTest.tearDown(AlumnoDAOTest.java:21)
+		... 3 more
+	Caused by: Error : 942, Position : 12, SQL = DELETE FROM ALUMNOS WHERE CLAVE LIKE 'T%', Original SQL = DELETE FROM ALUMNOS WHERE CLAVE LIKE 'T%', Error Message = ORA-00942: la tabla o vista no existe
+
+		at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:726)
+		... 19 more
+Caused by: Error : 942, Position : 12, SQL = DELETE FROM ALUMNOS WHERE CLAVE LIKE 'T%', Original SQL = DELETE FROM ALUMNOS WHERE CLAVE LIKE 'T%', Error Message = ORA-00942: la tabla o vista no existe
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:726)
+	... 19 more
+
+AlumnoDAOTest.testInsertarYBuscar -- Time elapsed: 0.162 s <<< ERROR!
+java.sql.SQLSyntaxErrorException: 
+ORA-00942: la tabla o vista no existe
+
+https://docs.oracle.com/error-help/db/ora-00942/
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:718)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:618)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1372)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:975)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:237)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:524)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:298)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1510)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:2021)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1634)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3973)
+	at oracle.jdbc.driver.OraclePreparedStatement.doExecuteLargeUpdate(OraclePreparedStatement.java:4339)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeLargeUpdate(OraclePreparedStatement.java:4316)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:4291)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1007)
+	at AlumnoDAOTest.limpiarDatosTest(AlumnoDAOTest.java:28)
+	at AlumnoDAOTest.setUp(AlumnoDAOTest.java:16)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.sql.SQLSyntaxErrorException: ORA-00942: la tabla o vista no existe
+
+https://docs.oracle.com/error-help/db/ora-00942/
+		at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:718)
+		at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:618)
+		at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1372)
+		at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:975)
+		at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:237)
+		at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:524)
+		at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:298)
+		at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1510)
+		at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:2021)
+		at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1634)
+		at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3973)
+		at oracle.jdbc.driver.OraclePreparedStatement.doExecuteLargeUpdate(OraclePreparedStatement.java:4339)
+		at oracle.jdbc.driver.OraclePreparedStatement.executeLargeUpdate(OraclePreparedStatement.java:4316)
+		at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:4291)
+		at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1007)
+		at AlumnoDAOTest.limpiarDatosTest(AlumnoDAOTest.java:28)
+		at AlumnoDAOTest.tearDown(AlumnoDAOTest.java:21)
+		... 3 more
+	Caused by: Error : 942, Position : 12, SQL = DELETE FROM ALUMNOS WHERE CLAVE LIKE 'T%', Original SQL = DELETE FROM ALUMNOS WHERE CLAVE LIKE 'T%', Error Message = ORA-00942: la tabla o vista no existe
+
+		at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:726)
+		... 19 more
+Caused by: Error : 942, Position : 12, SQL = DELETE FROM ALUMNOS WHERE CLAVE LIKE 'T%', Original SQL = DELETE FROM ALUMNOS WHERE CLAVE LIKE 'T%', Error Message = ORA-00942: la tabla o vista no existe
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:726)
+	... 19 more
+
+AlumnoDAOTest.testListar -- Time elapsed: 0.199 s <<< ERROR!
+java.sql.SQLSyntaxErrorException: 
+ORA-00942: la tabla o vista no existe
+
+https://docs.oracle.com/error-help/db/ora-00942/
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:718)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:618)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1372)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:975)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:237)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:524)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:298)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1510)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:2021)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1634)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3973)
+	at oracle.jdbc.driver.OraclePreparedStatement.doExecuteLargeUpdate(OraclePreparedStatement.java:4339)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeLargeUpdate(OraclePreparedStatement.java:4316)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:4291)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1007)
+	at AlumnoDAOTest.limpiarDatosTest(AlumnoDAOTest.java:28)
+	at AlumnoDAOTest.setUp(AlumnoDAOTest.java:16)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.sql.SQLSyntaxErrorException: ORA-00942: la tabla o vista no existe
+
+https://docs.oracle.com/error-help/db/ora-00942/
+		at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:718)
+		at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:618)
+		at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1372)
+		at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:975)
+		at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:237)
+		at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:524)
+		at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:298)
+		at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1510)
+		at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:2021)
+		at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1634)
+		at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3973)
+		at oracle.jdbc.driver.OraclePreparedStatement.doExecuteLargeUpdate(OraclePreparedStatement.java:4339)
+		at oracle.jdbc.driver.OraclePreparedStatement.executeLargeUpdate(OraclePreparedStatement.java:4316)
+		at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:4291)
+		at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1007)
+		at AlumnoDAOTest.limpiarDatosTest(AlumnoDAOTest.java:28)
+		at AlumnoDAOTest.tearDown(AlumnoDAOTest.java:21)
+		... 3 more
+	Caused by: Error : 942, Position : 12, SQL = DELETE FROM ALUMNOS WHERE CLAVE LIKE 'T%', Original SQL = DELETE FROM ALUMNOS WHERE CLAVE LIKE 'T%', Error Message = ORA-00942: la tabla o vista no existe
+
+		at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:726)
+		... 19 more
+Caused by: Error : 942, Position : 12, SQL = DELETE FROM ALUMNOS WHERE CLAVE LIKE 'T%', Original SQL = DELETE FROM ALUMNOS WHERE CLAVE LIKE 'T%', Error Message = ORA-00942: la tabla o vista no existe
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:726)
+	... 19 more
+

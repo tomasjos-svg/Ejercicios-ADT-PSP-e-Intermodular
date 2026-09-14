@@ -1,0 +1,15 @@
+services:
+  oracle:
+    image: gvenzl/oracle-xe:latest
+    container_name: oracle_alumnos
+    ports:
+      - "1521:1521"
+    environment:
+      ORACLE_PASSWORD: Oracle123!
+      APP_USER: alumno
+      APP_USER_PASSWORD: Alumno123!
+    volumes:
+      - oracle_alumnos_data:/opt/oracle/oradata
+
+volumes:
+  oracle_alumnos_data:

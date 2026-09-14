@@ -1,0 +1,8 @@
+entrada en proceso de lectura de fichero C:\Users\tomas\eclipse-workspace\ProcesadorFicheroObjetos\src\ProcesadorFicheroObjetos\PMDM.dat
+C:\Users\tomas\eclipse-workspace\ProcesadorFicheroObjetos\src\ProcesadorFicheroObjetos\PMDM.dat
+Hemos entrado en el proceso de lectura de C:\Users\tomas\eclipse-workspace\ProcesadorFicheroObjetos\src\ProcesadorFicheroObjetos\PMDM.dat
+Fin del fichero
+Nombre: Sofia Fernandez DNI: 77777777G Calificación: 9.0
+Nombre: Pablo Sanchez DNI: 88888888H Calificación: 6.25
+Nombre: Elena Gomez DNI: 99999999J Calificación: 7.8
+Alumnos leídos: 3

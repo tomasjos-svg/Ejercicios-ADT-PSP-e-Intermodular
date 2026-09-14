@@ -1,0 +1,28 @@
+services:
+
+  biblioteca-service:
+    build:
+      context: .
+    container_name: biblioteca_service
+    platform: linux/amd64
+    ports:
+      - "8081:8080"
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    environment:
+      SPRING_MONGODB_URI: mongodb://mongodb:27017/biblioteca
+
+  mongodb:
+    image: mongo:6.0
+    container_name: mongodb-demo
+    volumes:
+      - mongo_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  mongo_data:

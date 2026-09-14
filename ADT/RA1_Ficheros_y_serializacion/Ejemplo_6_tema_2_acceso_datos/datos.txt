@@ -1,0 +1,2 @@
+Entero: 2 Real: 3.5
+String: resultados.txt

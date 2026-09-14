@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Chat STOMP</title>
+</head>
+
+<body>
+    <input id="nombre" placeholder="Nombre">
+    <input id="texto" placeholder="Mensaje">
+    <button onclick="enviar()">Enviar</button>
+    <pre id="log"></pre>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+    <script>
+
+        const base = window.location.pathname
+                .substring(0, window.location.pathname.lastIndexOf('/'));
+        const socket = new SockJS(base + '/chat');
+        const stomp = Stomp.over(socket);
+        stomp.debug = null;
+        stomp.connect({}, () => {
+            stomp.subscribe('/topic/mensajes', frame => {
+                const m = JSON.parse(frame.body);
+                document.getElementById('log').textContent +=
+                        m.from + ': ' + m.body + '\n';
+            });
+        });
+
+        function enviar() {
+            const from =
+                    document.getElementById('nombre').value;
+            const body =
+                    document.getElementById('texto').value;
+            stomp.send(
+                    '/app/mensaje',
+                    {},
+                    JSON.stringify({from, body})
+            );
+        }
+    </script>
+</body>
+</html>
