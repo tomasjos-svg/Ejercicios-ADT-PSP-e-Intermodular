@@ -7,7 +7,8 @@ import java.io.IOException;
 public class Lanzador {
     public static void main(String[] args) throws IOException, InterruptedException {
         String entrada = args[0];           
-        String ruta = "C:\\Users\\tomas\\eclipse-workspace\\ProcesadorFichero\\src\\ProcesadorFichero\\";
+        String ruta = "C:\\Users\\tomas\\eclipse-workspace_r\\eclipse-workspace-docente-reorganizado\\PSP\\"
+        		+ "RA1_Programacion_multiproceso\\ProcesadorFichero\\src\\ProcesadorFichero\\";
         String[] consonantes = { "B", "C", "D", "F", "G","H","J","K", "L","M","N","Ñ","P","Q","R","S","T","V","W","X","Y","Z" };         
          for (int i = 0; i < consonantes.length; i++) {
             String err = ruta +"_Errores_" + consonantes[i] + ".txt";

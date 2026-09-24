@@ -10,7 +10,9 @@ public class LeeStrings {
         String str,num;
         String sal="";
         double x;
-        BufferedReader ent = new BufferedReader(new FileReader("C:\\Users\\tomas\\eclipse-workspace\\Ejemplo_8_tema_2_acceso_datos\\d2.txt"));
+        BufferedReader ent = new BufferedReader(new FileReader("C:\\Users\\tomas\\eclipse-workspace_r\\"
+        		+ "eclipse-workspace-docente-reorganizado\\ADT\\RA1_Ficheros_y_serializacion\\"
+        		+ "Ejemplo_8_tema_2_acceso_datos\\d2.txt"));
         String texto="";
         String linea=ent.readLine();  
         while(linea!=null) {
@@ -19,7 +21,7 @@ public class LeeStrings {
         }
          System.out.println(texto);
          
-        BufferedWriter out=new BufferedWriter (new FileWriter(".\\d2.txt"));   
+        BufferedWriter out=new BufferedWriter (new FileWriter(".\\archivo.txt",true));   
         texto="Hola mundo";
         for(int i=0;i<texto.length();i++)   {
         	 out.write(texto.charAt(i));       

@@ -27,10 +27,12 @@ public class Ejemplo {
             manejador = new RandomAccessFile(fichero,"r");
             char ac[];
             int i;            
-            manejador.seek(200);
+            manejador.seek(100);
             ac = new char[2];
             ac[0] = manejador.readChar();
-            ac[1] = manejador.readChar();    
+            System.out.println(ac[0]);
+            ac[1] = manejador.readChar();
+            System.out.println(ac[1]);
         } catch (EOFException ex) {
         } catch (IOException ex) {
             System.out.println("Error: " + ex.getMessage());

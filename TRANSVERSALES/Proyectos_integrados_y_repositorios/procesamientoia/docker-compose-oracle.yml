@@ -1,0 +1,22 @@
+services:
+
+  oracle:
+    image: gvenzl/oracle-xe:21-full
+    container_name: oracle_merkle
+    ports:
+      - "1521:1521"
+    environment:
+      ORACLE_PASSWORD: "OracleAdmin2026"
+      APP_USER: alumno
+      APP_USER_PASSWORD: "Alumno123!"
+    volumes:
+      - oracle_merkle_data:/opt/oracle/oradata
+    healthcheck:
+      test: ["CMD", "healthcheck.sh"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 20s
+
+volumes:
+  oracle_merkle_data:

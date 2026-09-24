@@ -1,12 +1,10 @@
 package ProcesadorFichero;
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-
 public class ProcesadorFichero {
 public static BufferedReader lectorFicheros(
     String nombreFichero) throws FileNotFoundException {
@@ -46,8 +44,7 @@ public static void recuento(String Entrada, String letra, String Salida) throws 
                 System.out.println(i);
             }            
         }            
-        lineaLeida = entrada.readLine();
-    }        
+        lineaLeida = entrada.readLine();    }        
     salida.println(totalConsonantes);
     salida.flush();        
     salida.close();

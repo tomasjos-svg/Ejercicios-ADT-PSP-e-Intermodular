@@ -26,34 +26,46 @@ public class Principal {
 	           numero_entero=sc.nextInt();
 	           sc.nextLine();
 	           while (numero_entero>0) {
-	        	   entrada.write(numero_entero);
+	        	   entrada.writeInt(numero_entero);
 	        	   System.out.println("Introduce números positivos por teclado");
 		           numero_entero=sc.nextInt();
 		           sc.nextLine();
 	           }
+	           entrada.writeInt(-1);
 	           System.out.println("Introduce número real por teclado");  
 	           numero=sc.nextDouble();
 	           while(numero!=-1.0) {
 	        	   entrada.writeDouble(numero);
 	        	   System.out.println("Introduce número real por teclado");
-		           numero=sc.nextInt();
+		           numero=sc.nextDouble();
 		           sc.nextLine();
 	           }
+	           entrada.writeDouble(-1.0);
 	           entrada.close();
+	           
 	           FileInputStream f_o=new FileInputStream(".//cadena.txt");
 	           ObjectInputStream salida=new ObjectInputStream(f_o);
 	           
 	           System.out.println("el contenido del fichero es " + salida.readDouble()); 
 	           double numero_salida=salida.readDouble();
-	           while (salida.available()>0) {
-	        	   System.out.println(numero_salida);
-	        	   numero_salida=salida.readDouble();
+	           System.out.println(numero_salida);
+	           int entero = salida.readInt();
+
+               System.out.println("Números enteros:");
+	           while (entero != -1) {
+	                System.out.println(entero);
+	                entero = salida.readInt();
+               }
+	           System.out.println("Números reales:");
+               double real = salida.readDouble();
+               while (real != -1.0) {
+	                System.out.println(real);
+	                real = salida.readDouble();
 	           }
-	        	   
-	           
+	           salida.close();
 	        } 
 	    catch (IOException e)   {
-	       System.out.println("Anomalia en flujo de salida");
+	       System.out.println("Anomalia en flujo de salida o fin de fichero");
 	   }
 	} 
 }

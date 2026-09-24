@@ -1,6 +1,6 @@
-C:\Users\tomas\eclipse-workspace\ProcesadorFichero\src\ProcesadorFichero\texto.txt
-Q
-C:\Users\tomas\eclipse-workspace\ProcesadorFichero\src\ProcesadorFichero\Q.txt
+C:\Users\tomas\eclipse-workspace_r\eclipse-workspace-docente-reorganizado\PSP\RA1_Programacion_multiproceso\ProcesadorFichero\src\ProcesadorFichero\texto.txt
+W
+C:\Users\tomas\eclipse-workspace_r\eclipse-workspace-docente-reorganizado\PSP\RA1_Programacion_multiproceso\ProcesadorFichero\src\ProcesadorFichero\W.txt
 linea leida
 C
 u
@@ -395,6 +395,7 @@ r
  
 E
 W
+23
 ,
  
 d
@@ -682,6 +683,7 @@ s
  
 E
 W
+92
 )
  
 linea leida
@@ -835,9 +837,7 @@ i
 d
 o
 .
-i
-d
-o
+
 .
 
 .

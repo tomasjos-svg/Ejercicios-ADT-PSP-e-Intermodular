@@ -1,0 +1,9 @@
+.metadata/
+**/bin/
+**/target/
+**/build/
+**/.gradle/
+**/*.class
+**/*.log
+.idea/
+*.iml

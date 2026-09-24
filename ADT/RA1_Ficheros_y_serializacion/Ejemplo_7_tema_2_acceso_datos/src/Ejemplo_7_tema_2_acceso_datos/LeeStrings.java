@@ -6,20 +6,21 @@ public class LeeStrings {
     String str="", num;    double x=0;   BufferedReader ent = null;
    try {
       ent = new BufferedReader(
-      new FileReader("c:\\users\\tomas\\downloads\\d2.txt"));
+      new FileReader("c:\\users\\tomas\\downloads\\d3.txt"));
       do {
            str=ent.readLine(); // lee una línea
            if (str!=null) { 
-              num=ent.readLine();
+              //num=ent.readLine();
               try {
-                 x=Double.parseDouble(num);
+                 x=Double.parseDouble(str);
+                 System.out.println(str + " " + x);
                } catch (NumberFormatException e) {
-              System.out.println ("Error al leer el numero: "+num);
+              System.out.println ("Error al leer la linea, no hay un número: "+str);
              } // try
           } // if
       } while (str!=null);
       } finally {
-      if (ent!=null) { System.out.println(str + " " + x); ent.close();}
+      ent.close();
       } // try
     } // main
 } // close
