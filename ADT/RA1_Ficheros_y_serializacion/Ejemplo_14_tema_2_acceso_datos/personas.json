@@ -1,0 +1,15 @@
+[ {
+  "nombre" : "Ana",
+  "apellidos" : "López",
+  "edad" : 27
+}, {
+  "nombre" : "María",
+  "apellidos" : "Fernández",
+  "edad" : 29,
+  "ciudad" : "Oviedo",
+  "telefono" : "600123456"
+}, {
+  "nombre" : "Pedro",
+  "apellidos" : "Suárez",
+  "edad" : 35
+} ]
