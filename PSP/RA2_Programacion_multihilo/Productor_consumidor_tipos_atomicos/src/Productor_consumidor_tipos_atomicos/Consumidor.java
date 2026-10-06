@@ -22,6 +22,8 @@ public class Consumidor implements Runnable {
                 Thread.sleep(1500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
+                Thread.currentThread().interrupt();
+                break;
             }
         }
     }
