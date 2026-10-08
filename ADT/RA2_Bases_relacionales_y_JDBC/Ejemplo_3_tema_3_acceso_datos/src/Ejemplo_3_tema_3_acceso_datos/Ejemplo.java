@@ -5,7 +5,7 @@ public class Ejemplo {
     private static Connection conexion;
     private static String bd="alumno";
     private static String user="alumno";
-    private static String password=System.getenv().getOrDefault("DB_PASSWORD", "password");
+    private static String password=System.getenv().getOrDefault("DB_PASSWORD", "Alumno123!");
     private static String host="127.0.0.1:3307";
     private static String server="jdbc:mysql://"+host+"/"+bd;
     public static void main(String[] args) {

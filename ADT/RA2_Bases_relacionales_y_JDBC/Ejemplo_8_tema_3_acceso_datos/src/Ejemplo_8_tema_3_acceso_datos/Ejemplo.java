@@ -5,19 +5,19 @@ public class Ejemplo {
     public static void main(String[] args) {
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            Connection conexion = DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1521/XEPDB1", "alumno", System.getenv().getOrDefault("DB_PASSWORD", "password"));
+            Connection conexion = DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1522/XEPDB1", "alumno", System.getenv().getOrDefault("DB_PASSWORD", "password"));
             DatabaseMetaData meta = conexion.getMetaData();
             System.out.println("Base de datos: " + meta.getDatabaseProductName());
             System.out.println("Version: " + meta.getDatabaseProductVersion());
             System.out.println("Driver: " + meta.getDriverName());
             System.out.println("\n--- TABLAS DEL USUARIO ALUMNO ---");
-            try (ResultSet rs = meta.getTables(null, "ALUMNO", null, new String[]{"TABLE"})) {
+            try (ResultSet rs = meta.getTables(null, "ALUMNOS", null, new String[]{"TABLE"})) {
                 while (rs.next()) {
                     System.out.println("Tabla: " + rs.getString("TABLE_NAME"));
                 }
             }
             System.out.println("\n--- COLUMNAS DE PROFESOR ---");
-            try (ResultSet rs = meta.getColumns(null, "ALUMNO", "PROFESOR", null)) {
+            try (ResultSet rs = meta.getColumns(null, "ALUMNOS", "PROFESOR", null)) {
                 while (rs.next()) {
                     String nombre = rs.getString("COLUMN_NAME");
                     String tipo = rs.getString("TYPE_NAME");
@@ -27,7 +27,7 @@ public class Ejemplo {
                 }
             }
             System.out.println("\n--- CLAVE PRIMARIA DE PROFESOR ---");
-            try (ResultSet pk = meta.getPrimaryKeys(null, "ALUMNO", "PROFESOR")) {
+            try (ResultSet pk = meta.getPrimaryKeys(null, "ALUMNOS", "PROFESOR")) {
                 while (pk.next()) {
                     String columna = pk.getString("COLUMN_NAME");
                     String nombrePK = pk.getString("PK_NAME");

@@ -9,7 +9,7 @@ public class Ejemplo {
     public static void main(String[] args) {
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            Connection conexion = DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1521/XEPDB1", "alumno", System.getenv().getOrDefault("DB_PASSWORD", "password"));
+            Connection conexion = DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1522/XEPDB1", "alumno", System.getenv().getOrDefault("DB_PASSWORD", "password"));
             String llamada = "{? = call devuelve_nom_2(?)}";
             CallableStatement sentenciaLlamable = conexion.prepareCall(llamada);
             sentenciaLlamable.registerOutParameter(1, Types.VARCHAR);
@@ -26,3 +26,27 @@ public class Ejemplo {
         }
     }
 }
+
+/*
+
+CREATE OR REPLACE FUNCTION devuelve_nom_2 (
+    p_dni IN VARCHAR2
+)
+RETURN VARCHAR2
+AS
+    v_nombre profesor.nombre%TYPE;
+BEGIN
+    SELECT nombre
+    INTO v_nombre
+    FROM profesor
+    WHERE dni = p_dni;
+
+    RETURN v_nombre;
+
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        RETURN 'Profesor no encontrado';
+END;
+/
+
+*/

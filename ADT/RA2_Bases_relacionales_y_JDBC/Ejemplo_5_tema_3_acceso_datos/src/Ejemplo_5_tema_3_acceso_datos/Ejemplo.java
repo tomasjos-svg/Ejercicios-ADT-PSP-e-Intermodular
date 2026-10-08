@@ -8,7 +8,7 @@ public class Ejemplo {
     public static void main(String[] args) {
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            Connection conexion = DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1521/XEPDB1", "alumno", System.getenv().getOrDefault("DB_PASSWORD", "password"));
+            Connection conexion = DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1522/XEPDB1", "alumno", System.getenv().getOrDefault("DB_PASSWORD", "Alumno123!"));
             String dml = "UPDATE PROFESOR SET NOMBRE = ? WHERE DNI = ?";
             PreparedStatement sentenciaPreparada = conexion.prepareStatement(dml);
             sentenciaPreparada.setString(1, "LUIS");
